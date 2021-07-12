@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lodging</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <header class="header">
+  <div class="header-inner">
+    <div class="header-left-nav">
+        <a href="/"><img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
+        <form action="" accept-charset="UTF-8" method="get">
+        <div class="header-sharch d-lg-inline-block d-none">
+          <input type="text" name="area" id="area" value="" class="form-control" placeholder="エリア">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="header-sharch d-lg-inline-block d-none">
+          <input type="text" name="keyword" id="keyword" value="" class="form-control" placeholder="キーワード">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="submit" name="commit" value="" class="d-none" data-disable-with="">
+        </form>    
+      </div>
+    <div class="header-right-nav">
+      <div class="nav-item d-sm-inline-block d-none">
+        オジー
+      </div>
+
+       <% if user_signed_in? %>
+          <div class="">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            
+              <div class="nav-item">
+        <label for="labeltest">
+          <img class="mx-3 p-1 host-icon nav-trigger" alt="メニュー" src="/uploads/user/image/698/%E3%83%8F%E3%82%9A%E3%82%AF%E3%82%99%E8%94%B5.jpeg">
+        </label>
+        <input type="checkbox" id="labeltest"/>
+        <ul class="header-nav-menu">
+          <li>ルーム登録</li>
+          <li>予約済みルーム一覧</li>
+          <li>登録済みルーム一覧</li>
+          <li>設定</li>
+          <li>ログアウト</li>
+        </ul>
+      </div>
+
+
+          </div>
+
+        <% else %>
+          <div class="">
+            <%= link_to "ログイン", new_user_session_path, class: "nav-item btn-primary btn"%>
+            <%= link_to "登録する", new_user_registration_path, class: "nav-item btn-secondary btn" %>
+          </div>
+
+        <% end %>
+
+    </div>
+    </div>
+  </div>  
+  </header>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+    
+  <footer class="footer">
+    <p>© 2020 POTEPAN.INC.</p>
+  </footer>
+  </body>
+</html>

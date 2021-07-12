@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .header {
+    width: 100%;
+    height: 70px;
+    padding: 4px 30px;
+    background-color: #000000;
+    position: relative;
+}
+
+.header-left-nav {
+    float: left;
+    display: flex;
+}
+
+.form-control {
+    width: 180px;
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding-left: 30px;
+}
+
+.header-right-nav {
+    float: right;
+    margin-right: 50px;
+}
+
+.nav-item {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #4a90e2 !important;
+}
+
+.btn-secondary {
+    background-color:green !important;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.nav-item input {
+    display: none;
+}
+
+.nav-item input:checked ~ .header-nav-menu {
+    display: block;
+}
+
+.header-nav-menu {
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    margin-top: 64px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
