@@ -40,11 +40,11 @@
         </label>
         <input type="checkbox" id="labeltest"/>
         <ul class="header-nav-menu">
-          <li>ルーム登録</li>
+          <li class="">ルーム登録</li>
           <li>予約済みルーム一覧</li>
           <li>登録済みルーム一覧</li>
-          <li>設定</li>
-          <li>ログアウト</li>
+          <li><%= link_to "設定", edit_user_registration_path %></li>
+          <li><a rel="nofollow" data-method="delete" href="/users/sign_out">ログアウト</a></li>
         </ul>
       </div>
 
@@ -62,10 +62,11 @@
     </div>
     </div>
   </div>  
-  </header>
-
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  </header>
+
+
 
     <%= yield %>
     

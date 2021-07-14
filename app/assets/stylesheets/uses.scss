@@ -1,40 +1,54 @@
-.device_frame {
-    max-width: 600px;
-    text-align: center;
-    padding: 24px;
-    margin: 0px auto;
-    background-color: white;
-    border-radius: 4px;
+ul {
+    list-style: none;
+  }
+  .user {
+    width: 100%;
+}
+ .index {
+    display: flex
+ }
+/*以下左側*/
+.user-nav {
+    padding: 30px 15px;
 }
 
-.device p {
+.user-nav li {
+    font-size: 18px;
+    padding: 10px;
+}
+/*以下右側*/
+h5 {
+    font-size: 1.25rem;
+}
+
+label {
+    width: 150px;
+}
+
+.user-view {
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.update-content {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
     font-size: 16px;
 }
 
-div.field, div.actions {
-    margin-bottom: 10px;
+.box {
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px 100px;
+    width: 880px;
 }
 
-.form-row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: 40px;
-   
+.col-md-3 {
+    padding:0 15px
 }
 
-.device_inner {
-    width: 360px;
-    margin: 0px auto;
-}
-
-.required-b::before {
-    content: "必須";
-    color: #fff;
-    background-color: #ff0000a8;
-    font-size: 12px;
-    border-radius: 5px;
-    padding: 4px;
-    margin: 0 5px;
+.col-md-9 {
+    max-width: 75%;
+    margin: 0 25px;
 }
